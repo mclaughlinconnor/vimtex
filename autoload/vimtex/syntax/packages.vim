@@ -53,7 +53,7 @@ function! s:register_packages() abort " {{{1
 
     let l:cfg.__load =
           \    l:cfg.load > 1
-          \ || (l:cfg.load == 1 && index(l:packages, l:pkg) >= 0)
+          \ || (l:cfg.load == 1 && index(l:packages, l:pkg == "code" ? "minted" : l:pkg) >= 0)
   endfor
 endfunction
 
